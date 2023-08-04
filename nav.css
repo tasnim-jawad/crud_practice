@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: blueviolet;
+    
+}
+.logo{
+    padding: 5px;
+}
+.logo img{
+    display: block;
+    height: 70px;
+}
+nav{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+
+}
+nav ul li{
+    list-style: none;
+    padding-left: 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav ul li a:hover{
+    color: red;
+}
+
+.toggol_container{
+    /* display: none; */
+    /* display: flex; */
+    display: none;
+    background-color: red;
+    position: absolute;
+    width: fit-content;
+    padding: 0;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+
+}
+.toggol_container a{
+    font-size: 30px;
+    color: aqua;
+    display: block;
+    width: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    margin-left: auto;
+    text-align: center;
+    
+}
+.nav_absolute{
+    display: none;
+}
+
+.test1,
+.test2,
+.test3{
+    height: 600px;
+    background-color: red;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 991.99px) {
+    .toggol_container{
+        display: block;
+    }
+    .nav_lg{
+        display: none;
+    }
+    .nav_absolute{
+        display: block;
+        /* display: none; */
+        position: fixed;
+        background-color: blueviolet;
+        padding: 20px;
+        right: -320px;
+        top: 0;
+        z-index: 20;
+        transition: all ease-in-out .1s;
+
+    }
+    .nav_absolute ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0;
+        align-items: flex-start;
+        width: 280px;
+    }
+    .nav_absolute ul li{
+        padding:10px;
+        width: 100%;
+    }
+    .nav_absolute ul li a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+    }
+    .nav_absolute ul li:hover {
+        background-color: rgba(0, 0, 0, .3);
+        border-radius: 5px;
+    }
+    .nav_absolute ul li:hover a{
+        color: red;
+    }
+    .nav_overlay{
+            /* display: none; */
+            visibility: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000;
+            opacity: 0;
+            transition: all linear .3s;
+    }
+}
